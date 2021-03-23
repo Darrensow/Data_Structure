@@ -1,0 +1,14 @@
+Question 2
+(1) Performs Person's tasks
+(2) Invoke Employee's overloaded constructor
+(3) Performs Employee's tasks 
+(4) Performs Faculty's tasks
+
+The instance created will go back to the most general class's constructor (Faculty -> Employee -> Person -> Employee -> Faculty) then after executing the constructor, it proceeds to the derived class's constructor.
+
+
+Question 3
+AB - it uses dynamic binding to print, for object o[0], it is the toString method of A while o[1] uses the toString that prints out B.
+
+Interface vs Abstract Class
+Interface is just a template for classes implementation, it cannot have methods that are declared.

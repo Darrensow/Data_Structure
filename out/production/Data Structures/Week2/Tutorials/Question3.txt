@@ -1,0 +1,11 @@
+What is a raw type? Why is a raw type unsafe? Why is the raw type allowed in Java?
+
+A raw type is a generic class/interface that is used without specifying a concrete type/without a type parameter.
+The reference type that is formed by taking the name of a generic type declaration without an accompanying type argument list.
+
+Raw types are unsafe because bypass generic type checks, deferring the catch of unsafe code to runtime.
+
+Raw type are allowed in Java is only as a concession to compatibility of legacy code and the use of raw types in code written after the introduction of generic programming into Java Language is discouraged.
+
+For more info, check
+https://stackoverflow.com/questions/2770321/what-is-a-raw-type-and-why-shouldnt-we-use-it#:~:text=A%20raw%20type%20is%20the%20name%20of%20a%20generic%20class,given%20the%20generic%20Box%20class%3A&text=The%20warning%20shows%20that%20raw,should%20avoid%20using%20raw%20types.

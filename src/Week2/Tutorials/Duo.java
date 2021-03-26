@@ -1,6 +1,6 @@
 package Week2.Tutorials;
 
-//Question 6
+//Question 5
 public class Duo <A, B> {
     private A first;
     private B second;
@@ -12,6 +12,7 @@ public class Duo <A, B> {
 
 }
 
+//Question 6
 class TestConsole {
     public static void main(String[] args) {
         Duo<String, Integer> object1 = new Duo<>("Java", 50);

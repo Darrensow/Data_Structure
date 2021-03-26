@@ -22,8 +22,10 @@ public class MyGeneric<E> {
 //Tester program for Question 2
 class TestQ2 {
     public static void main(String[] args) {
-        MyGeneric<String> strObj = new MyGeneric<>("Java");
-        MyGeneric<Integer> intObj = new MyGeneric<>(10);
+        MyGeneric<String> strObj = new MyGeneric<>();
+        strObj.setE("Java");
+        MyGeneric<Integer> intObj = new MyGeneric<>();
+        intObj.setE(10);
         System.out.println("Value of strObj is " + strObj.getE());
         System.out.println("Value of intObj is " + intObj.getE());
     }

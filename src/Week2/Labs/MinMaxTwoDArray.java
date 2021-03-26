@@ -1,5 +1,6 @@
 package Week2.Labs;
 
+//Question 6
 public class MinMaxTwoDArray<E> {
     private E e;
 

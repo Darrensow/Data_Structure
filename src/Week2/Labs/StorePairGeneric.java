@@ -1,6 +1,6 @@
 package Week2.Labs;
 
-public class StorePairGeneric<E> implements Comparable<StorePairGeneric<E>>{
+public class StorePairGeneric<E extends Comparable<E>> implements Comparable<StorePairGeneric>{
     private E first, second;
 
     public StorePairGeneric(E first, E second) {
@@ -25,16 +25,13 @@ public class StorePairGeneric<E> implements Comparable<StorePairGeneric<E>>{
         return "first = " + first + " second = " + second;
     }
 
-    //how to override?
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(StorePairGeneric o) {
+        return this.first == o.first;
     }
 
-    //how to override?
     @Override
-    public int compareTo(StorePairGeneric<E> o) {
-        return 0;
+    public int compareTo(StorePairGeneric o) {
+        return o.first.compareTo(this.first);
     }
 }
 
@@ -43,6 +40,11 @@ class TestConsole {
         StorePairGeneric<Integer> a = new StorePairGeneric<>(6,4);
         StorePairGeneric<Integer> b = new StorePairGeneric<>(2,2);
         StorePairGeneric<Integer> c = new StorePairGeneric<>(6,3);
-        System.out.println(a.equals(c));;
+        System.out.println(a.equals(c));
+        System.out.println(a.equals(b));
+        System.out.println(b.equals(c));
+        System.out.println(a.compareTo(c));
+        System.out.println(a.compareTo(b));
+        System.out.println(b.compareTo(c));
     }
 }

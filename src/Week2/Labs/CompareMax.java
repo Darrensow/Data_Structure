@@ -1,5 +1,6 @@
 package Week2.Labs;
 
+//Question 3
 public class CompareMax {
     //generic static method for Question 3
     public static <E extends Comparable<E>> E maximum(E e1, E e2, E e3){

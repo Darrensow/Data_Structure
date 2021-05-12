@@ -2,6 +2,7 @@ package Week9.Lecture;
 
 public class TestWeightedGraph {
    public static void main(String[] args) {
+      System.out.println("Git tracker");
       WeightedGraph<String, Integer> graph1 = new WeightedGraph<>();
       String[] cities = {"Alor Setar", "Kuching", "Langkawi", "Melaka", "Penang", "Tawau"};
       for (String i : cities)

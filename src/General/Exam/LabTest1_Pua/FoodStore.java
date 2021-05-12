@@ -24,6 +24,11 @@ public class FoodStore<T1, T2 extends Comparable<T2>> extends ShopLot {
         }
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
     public boolean equal(FoodStore obj) {
         if (this.person.getName_contact().equals(obj.person.getName_contact())) {
             return true;

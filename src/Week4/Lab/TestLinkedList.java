@@ -47,11 +47,11 @@ public class TestLinkedList {
         System.out.println();
 
         //i. Replace the items individually with the following: h,e,l,l,o.
+        linkedList.add(' ');// add a dummy value to make the list size equals to 5
         Character[] replacedValue = {'h', 'e', 'l', 'l', 'o'};
-        for (int i = 0; i < replacedValue.length - 1; i++) {
+        for (int i = 0; i < replacedValue.length; i++) {
             linkedList.set(i, replacedValue[i]);
         }
-        linkedList.add('o');
         linkedList.print();
         printMiddleValue(linkedList);
 

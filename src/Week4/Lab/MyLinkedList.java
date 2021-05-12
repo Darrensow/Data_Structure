@@ -43,7 +43,7 @@ public class MyLinkedList<E> {
                 current = current.next;
             }
             Node<E> temp = current.next;
-            current.next = new Node<E>(e);
+            current.next = new Node<>(e);
             (current.next).next = temp;
 
         }
@@ -119,7 +119,7 @@ public class MyLinkedList<E> {
     }
 
     public E get(int index){
-        if (index >= size) {
+        if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Index is out of the size of the list");
         }
         Node<E> current = head;
@@ -247,6 +247,23 @@ public class MyLinkedList<E> {
             current = current.next;
         }
         return current.element;
+    }
+
+    public E peekLast() {
+        return this.tail.element;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[ ");
+        Node<E> trav = head;
+        while (trav != null) {
+            sb.append(trav.element + " ");
+            trav = trav.next;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }
 
